@@ -12,7 +12,8 @@ namespace LemonadeStand
         {
             //Store store = new Store();
             //store.DisplayStoreInventory();
-
+            Inventory inv = new Inventory();
+            inv.DisplayInventory();
             Game game = new Game();
             game.RunGame();
 
