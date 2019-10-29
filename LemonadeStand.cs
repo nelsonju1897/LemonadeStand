@@ -10,13 +10,9 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            //Day d = new Day();
-            //d.DayOne();
-            //Weather w = new Weather();
-            //w.DailyWeatherCondition();
-            //w.DailyTempCondition();
-            //Game ja = new Game();
-            //ja.DailyActivities();
+            //Store store = new Store();
+            //store.DisplayStoreInventory();
+
             Game game = new Game();
             game.RunGame();
 
@@ -28,7 +24,6 @@ namespace LemonadeStand
             //Forcast should range from Sunny to Rainy
             //Forcast should range in tempurature from 55 degrees to 95 degrees
             // Display day
-            // Game will start on Monday and work through the week to Sunday
             // Display wallet
             // Display Inventory
             // Give option to go to store
@@ -55,6 +50,6 @@ namespace LemonadeStand
 
 
 
-        }
+            }
     }
 }
