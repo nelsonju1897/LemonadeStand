@@ -10,11 +10,7 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            //Store store = new Store();
-            //store.DisplayStoreInventory();
-
-
-           
+        
             Game game = new Game();
             game.RunGame();
 
@@ -34,14 +30,14 @@ namespace LemonadeStand
             // Buy ice cubes x
             // Buy lemons x
             // Buy sugar x
-            // return home
-            // Display current recipe
-            // Give option to change recipe
-            // While changing recipe
-            // Change amount of ice cubes
-            // Change amount of lemons
-            // Change amount of sugar
-            // Return home
+            // return home x
+            // Display current recipe x
+            // Give option to change recipe x
+            // While changing recipe x
+            // Change amount of ice cubes x
+            // Change amount of lemons x
+            // Change amount of sugar x
+            // Return home x
             // Give option to start day
             //When day starts
             //Customers go by and buy lemonade determined by random criteria
