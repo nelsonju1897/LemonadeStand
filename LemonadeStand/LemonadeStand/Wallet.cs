@@ -19,6 +19,7 @@ namespace LemonadeStand
         public Wallet()
         {
             money = 20.00;
+            Money = 20.00;
             profitMade = 0.00;
         }
         //member methods

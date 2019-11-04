@@ -39,10 +39,11 @@ namespace LemonadeStand
         public void ChangeRecipe(Player player, Store store)
         {
             Console.WriteLine("Would you like to change the amount of lemons, sugar cubes, ice cubes, price per cup or return to the lemonade stand?");
+            Console.WriteLine("Type: lemons. sugar cubes, ice cubes, price, or lemonade stand");
             string input = Console.ReadLine();
             if(input == "lemons")
             {
-                Console.WriteLine("How many lemons do you want to put in the recipe?");
+                Console.WriteLine("How many lemons do you want to put in the recipe? Type a numerical number");
                 int numLemons = Int32.Parse(Console.ReadLine());
                 if(numLemons <= player.inventory.lemons)
                 {
@@ -60,7 +61,7 @@ namespace LemonadeStand
             }
             if (input == "sugar cubes")
             {
-                Console.WriteLine("How many sugar cubes do you want to put in the recipe?");
+                Console.WriteLine("How many sugar cubes do you want to put in the recipe? Type a numerical number");
                 int numSugarCubes = Int32.Parse(Console.ReadLine());
                 if (numSugarCubes <= player.inventory.sugarCubes)
                 {
@@ -77,7 +78,7 @@ namespace LemonadeStand
             }
             if (input == "ice cubes")
             {
-                Console.WriteLine("How many ice cubes do you want to put in the recipe?");
+                Console.WriteLine("How many ice cubes do you want to put in the recipe? Type a numerical number");
                 int numIceCubes = Int32.Parse(Console.ReadLine());
                 if (numIceCubes <= player.inventory.iceCubes)
                 {

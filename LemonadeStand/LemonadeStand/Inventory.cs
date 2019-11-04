@@ -14,7 +14,12 @@ namespace LemonadeStand
         public int iceCubes;
         public int cups;
         public int sugarCubes;
-        
+        public double storeLemonProfit;
+        public double storeIceCubeProfit;
+        public double storeSugarCubeProfit;
+        public double storeCupProfit;
+        public double storeTotalProfit;
+
 
         //constructor
         public Inventory()
@@ -23,6 +28,11 @@ namespace LemonadeStand
             iceCubes = 10;
             cups = 10;
             sugarCubes = 10;
+            storeLemonProfit = 0;
+            storeCupProfit = 0;
+            storeSugarCubeProfit = 0;
+            storeIceCubeProfit = 0;
+            
         }
 
         //member methods
@@ -45,6 +55,7 @@ namespace LemonadeStand
                 int numLemons = (input + lemons);
                 lemons = numLemons;
                 player.wallet.money = (player.wallet.money - (input * store.PricePerLemon));
+                storeLemonProfit = storeLemonProfit + (input + store.PricePerLemon);
                 player.DisplayUserWallet();
                 DisplayInventory();
                 store.BuyItems(player, store);
@@ -65,6 +76,7 @@ namespace LemonadeStand
                 int numIceCubes = (input + iceCubes);
                 iceCubes = numIceCubes;
                 player.wallet.money = (player.wallet.money - (input * store.PricePerIceCube));
+                storeIceCubeProfit = storeIceCubeProfit + (input * store.PricePerIceCube);
                 player.DisplayUserWallet();
                 DisplayInventory();
                 store.BuyItems(player, store);
@@ -86,6 +98,7 @@ namespace LemonadeStand
                 int numCups = (input + cups);
                 cups = numCups;
                 player.wallet.money = (player.wallet.money - (input * store.PricePerCup));
+                storeCupProfit = storeCupProfit + (input * store.PricePerCup);
                 player.DisplayUserWallet();
                 DisplayInventory();
                 store.BuyItems(player, store);
@@ -101,8 +114,8 @@ namespace LemonadeStand
         {
             cups = cups - 1;
             player.wallet.money = player.wallet.money + player.recipe.PricePerCup;
-            player.wallet.profitMade = player.wallet.profitMade + player.recipe.PricePerCup;
-            
+            player.wallet.profitMade = (player.wallet.profitMade + player.recipe.PricePerCup) - storeTotalProfit;
+
         }
         public void AddSugarCube(Player player, Store store)
         {
@@ -113,6 +126,7 @@ namespace LemonadeStand
                 int numSugarCubes = (input + sugarCubes);
                 sugarCubes = numSugarCubes;
                 player.wallet.money = (player.wallet.money - (input * store.PricePerSugarCube));
+                storeSugarCubeProfit = storeSugarCubeProfit + (input * store.PricePerSugarCube);
                 player.DisplayUserWallet();
                 DisplayInventory();
                 store.BuyItems(player, store);

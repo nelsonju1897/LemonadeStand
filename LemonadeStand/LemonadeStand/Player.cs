@@ -43,7 +43,7 @@ namespace LemonadeStand
         
         public void GoTo(Player player, Store store)
         {
-            Console.WriteLine("Would you like to go to the store or go to the lemonade stand?");
+            Console.WriteLine("Would you like to go to the store or go to the lemonade stand? Type: store or lemonade stand.");
             string input = Console.ReadLine();
             if (input == "store")
             {
